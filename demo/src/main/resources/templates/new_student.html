@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        .error {color:red}
+    </style>
+</head>
+<body>
+
+<div>
+    <form action="#" th:action="@{/student/save}" th:object="${student}" method="post">
+
+        <input type="hidden" th:field="*{id}">
+        First Name: <input type="text" th:field="*{firstName}" placeholder="first Name">
+
+        <br><br>
+        Last Name: <input type="text" th:field="*{lastName}" placeholder="last Name">
+
+        <br><br>
+        Email Id: <input type="text" th:field="*{email}" placeholder="email">
+        <br><br>
+        Mobile No: <input type="text" th:field="*{mob_no}" placeholder="mobile no">
+
+        <button type="submit">Save</button>
+
+    </form>
+</div>
+
+</body>
+</html>
